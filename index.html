@@ -1,0 +1,499 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eshanthika | Creative Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f6, #e0f7ff, #f3e8ff);
+            color: #252044;
+        }
+
+        header {
+            background: linear-gradient(90deg, #6c35de, #e83e8c, #ff8c42);
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        section {
+            padding: 65px 9%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 8%;
+            background: linear-gradient(135deg, #6c35de, #e83e8c, #ff9a44);
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 span {
+            color: #ffeb3b;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 15px auto 25px;
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+            background: #ffeb3b;
+            color: #35205f;
+            padding: 13px 25px;
+            margin: 8px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            color: #7138d7;
+            margin-bottom: 35px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 1.9;
+            box-shadow: 0 8px 25px #7138d71c;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px #25204415;
+            border-bottom: 5px solid #e83e8c;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px #7138d733;
+        }
+
+        .card h3 {
+            color: #e83e8c;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            color: #7138d7;
+            border: 2px solid #d9c7ff;
+            border-radius: 30px;
+            padding: 13px 22px;
+            font-weight: bold;
+        }
+
+        .skill:hover {
+            background: #7138d7;
+            color: white;
+        }
+
+        .meme-section {
+            background: linear-gradient(135deg, #fff0f6, #e0f7ff);
+        }
+
+        .meme-banner {
+            text-align: center;
+            background: linear-gradient(90deg, #172d65, #6337bd, #e83e8c);
+            color: white;
+            padding: 35px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .meme-banner h3 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .meme-image {
+            display: block;
+            width: 100%;
+            max-width: 850px;
+            height: auto;
+            margin: 25px auto;
+            border: 6px solid white;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px #25204430;
+        }
+
+        .meme-caption {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #7138d7;
+            margin: 20px 0;
+        }
+
+        .contact {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        .contact p {
+            margin: 15px;
+        }
+
+        .contact a {
+            color: #e83e8c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #252044;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                line-height: 2;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>✨ Eshanthika</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#memes">Git Memes</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <h2>Hello, I'm <span>Eshanthika!</span> 👋</h2>
+
+        <h3>Computer Science and Engineering Student</h3>
+
+        <p>
+            Welcome to my creative portfolio! I love coding, exploring
+            new technologies, building innovative projects, and sharing
+            a little developer humor along the way.
+        </p>
+
+        <a href="#projects" class="button">Explore My Projects 🚀</a>
+        <a href="#memes" class="button">Explore Git Memes 😂</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">💜 About Me</h2>
+
+        <div class="about-box">
+            <p>
+                I am Eshanthika, a Computer Science and Engineering student
+                at KPR Institute of Engineering and Technology, Coimbatore.
+                I am interested in programming, Artificial Intelligence,
+                Machine Learning, web development, and creative technology.
+                I enjoy collaborating with my teammates and developing
+                solutions to real-world problems.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2 class="section-title">🎓 Education</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>💻 B.E. Computer Science and Engineering</h3>
+                <p>KPR Institute of Engineering and Technology</p>
+                <p>Coimbatore, Tamil Nadu</p>
+                <p>Currently Pursuing</p>
+            </div>
+
+            <div class="card">
+                <h3>📚 Higher Secondary Education</h3>
+                <p>Computer Science Stream</p>
+                <p>Class 12 Completed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">🌈 My Skills</h2>
+
+        <div class="skills">
+            <span class="skill">C Programming</span>
+            <span class="skill">Java</span>
+            <span class="skill">Python</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Machine Learning</span>
+            <span class="skill">Artificial Intelligence</span>
+            <span class="skill">MySQL</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">🚀 My Projects</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>👁️ Smart Third Eye</h3>
+                <p>
+                    An assistive technology project that helps visually
+                    and hearing-impaired people detect nearby obstacles
+                    through sensors and alerts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔐 College Single Sign-On</h3>
+                <p>
+                    A web-based prototype designed to provide a unified
+                    login experience for multiple college services.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🤟 Sign Language Translation</h3>
+                <p>
+                    A machine learning research project exploring sign
+                    language translation into regional languages.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📊 Hinglish Sentiment Analysis</h3>
+                <p>
+                    A research project investigating the effect of text
+                    preprocessing techniques on sentiment classification.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- IEEE Git Workshop Meme -->
+    <section class="meme-section" id="memes">
+
+        <h2 class="section-title">😂 IEEE Git Workshop Meme Zone</h2>
+
+        <div class="meme-banner">
+            <h3>💻 KPRIET × IEEE × Git</h3>
+            <p><strong>Code • Commit • Push • Laugh!</strong></p>
+            <p>Because Git Happens! 😎</p>
+        </div>
+
+        <div class="about-box">
+            <h3>🎉 KPRIET IEEE Git Workshop</h3>
+
+            <p>
+                From our first git init to surviving merge conflicts,
+                every developer has a story to tell!
+                Here is a meme celebrating the fun and struggles
+                of learning Git and GitHub.
+            </p>
+        </div>
+
+        <!-- Save the generated image as git-workshop-meme.png -->
+        <img
+            src="git-workshop-meme.png"
+            alt="KPRIET IEEE Git Workshop meme collage"
+            class="meme-image"
+        >
+
+        <p class="meme-caption">
+            😹 When the code works after 10 errors!
+            <br><br>
+            Learn Git. Fix Bugs. Push Code. Repeat! 💜
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>😂 Git Init</h3>
+                <p>
+                    Every developer's journey begins with one command.
+                    Confidence: 100%. Experience: 0%.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💀 Merge Conflicts</h3>
+                <p>
+                    When two developers edit the same line,
+                    Git decides it's time for a team meeting!
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Git Push</h3>
+                <p>
+                    That beautiful moment when your code finally
+                    reaches GitHub without an error.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+        <h2 class="section-title">🏆 Activities & Interests</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>💡 Innovation</h3>
+                <p>Exploring creative ideas and emerging technologies.</p>
+            </div>
+
+            <div class="card">
+                <h3>👩‍💻 Coding</h3>
+                <p>Practising programming and improving problem-solving skills.</p>
+            </div>
+
+            <div class="card">
+                <h3>🤝 Teamwork</h3>
+                <p>Collaborating on projects and learning from others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">📩 Contact Me</h2>
+
+        <div class="contact">
+            <p>Let's connect, collaborate, and create something amazing!</p>
+
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/" target="_blank"
+                   rel="noopener noreferrer">
+                    Visit My LinkedIn
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/" target="_blank"
+                   rel="noopener noreferrer">
+                    Visit My GitHub
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>✨ Eshanthika's Portfolio ✨</h3>
+        <p>Designed with creativity, curiosity, and code. 💜</p>
+        <p>© 2026 Eshanthika | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
+```
